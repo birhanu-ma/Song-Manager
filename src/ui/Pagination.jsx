@@ -6,6 +6,7 @@ import { pageDown } from "../features/song/SongsSlice.jsx";
 function Pagination() {
   const dispatch = useDispatch();
   const song = useSelector((state) => state.songs.list);
+  const loading = useSelector((state) => state.songs.isLoading);
 
   function handlePaginationUp() {
     dispatch(pageUp());
@@ -16,12 +17,16 @@ function Pagination() {
   if (song.length <= 0) return;
   return (
     <div className="pagination">
-      <button className="btn" onClick={handlePaginationDown}>
-        previous
-      </button>
-      <button className="btn" onClick={handlePaginationUp}>
-        next
-      </button>
+      {!loading && (
+        <>
+          <button className="btn" onClick={handlePaginationDown}>
+            previous
+          </button>
+          <button className="btn" onClick={handlePaginationUp}>
+            next
+          </button>
+        </>
+      )}
     </div>
   );
 }

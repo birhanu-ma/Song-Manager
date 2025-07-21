@@ -6,6 +6,7 @@ import { inverseAdded } from "../features/song/SongsSlice.jsx";
 function AddButton() {
   const navigate = useNavigate();
   const added = useSelector((state) => state.songs.added);
+  const loading = useSelector((state) => state.songs.isLoading);
   const dispatch = useDispatch();
 
   function handleAddSong() {
@@ -15,7 +16,7 @@ function AddButton() {
 
   return (
     <div>
-      {!added && (
+      {!added && !loading && (
         <button className="btn" onClick={handleAddSong}>
           Add Song
         </button>

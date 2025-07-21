@@ -6,6 +6,7 @@ import { inverseAdded } from "./SongsSlice.jsx";
 function SongDetails() {
   const navigate = useNavigate();
   const { id } = useParams();
+  const loading = useSelector((state) => state.songs.isLoading);
 
   const song = useSelector((state) =>
     state.songs.list.find((s) => s.id === Number(id))
@@ -17,9 +18,10 @@ function SongDetails() {
     navigate(`/edit/${id}`);
   }
   if (!song) return;
+  if (loading) <p>loading...</p>;
   return (
     <div className="details">
-      <h1>song details</h1>
+      <h1>Song details</h1>
       <p> {song.title}</p>
       <p>{song.artist}</p>
       <p>{song.year}</p>
