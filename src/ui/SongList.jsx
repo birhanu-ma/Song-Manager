@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import SongItem from "./SongItem";
-import { readSong } from "../features/song/SongsSlice";
+import React, { useEffect } from "react";
+import SongItem from "./SongItem.jsx";
+import { readSong } from "../features/song/SongsSlice.jsx";
 import { useDispatch, useSelector } from "react-redux";
 
 function SongList() {

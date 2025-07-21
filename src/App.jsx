@@ -1,11 +1,11 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AppLayout from "./ui/AppLayout";
-import SongDetails from "./features/song/SongDetails";
-import EditeSong from "./features/song/EditSong";
-import SongForm from "./features/song/SongForm";
+import AppLayout from "./ui/AppLayout.jsx";
+import SongDetails from "./features/song/SongDetails.jsx";
+import EditeSong from "./features/song/EditSong.jsx";
+import SongForm from "./features/song/SongForm.jsx";
 
-createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,

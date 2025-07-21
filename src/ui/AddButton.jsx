@@ -1,6 +1,7 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { inverseAdded } from "../features/song/SongsSlice";
+import { inverseAdded } from "../features/song/SongsSlice.jsx";
 
 function AddButton() {
   const navigate = useNavigate();

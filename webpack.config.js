@@ -10,10 +10,13 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, use: "babel-loader" },
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, use: "babel-loader" },
       { test: /\.(png|jpe?g|gif|svg)$/i, use: "asset/resource" },
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
     ],
+  },
+  resolve: {
+    extensions: [".js", ".jsx", ".json"],
   },
   plugins: [
     new HtmlWebpackPlugin({ template: "./public/index.html" }),

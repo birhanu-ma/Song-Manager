@@ -1,6 +1,7 @@
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { pageUp } from "../features/song/SongsSlice";
-import { pageDown } from "../features/song/SongsSlice";
+import { pageUp } from "../features/song/SongsSlice.jsx";
+import { pageDown } from "../features/song/SongsSlice.jsx";
 
 function Pagination() {
   const dispatch = useDispatch();
