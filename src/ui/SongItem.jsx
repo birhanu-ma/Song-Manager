@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 function SongItem({ song }) {
   const dispatch = useDispatch();
   if (!song) return null;
-  const { id, title, artist, album, date } = song;
+  const { id, title, artist, album, year } = song;
 
   function handleDelete(e) {
     e.preventDefault();
@@ -19,7 +19,7 @@ function SongItem({ song }) {
           <span>{title}</span>
           <span>{artist}</span>
           <span>{album}</span>
-          <span>{date}</span>
+          <span>{year}</span>
         </Link>
         <button onClick={handleDelete} className="delete">
           &times;
