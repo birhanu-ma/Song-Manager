@@ -16,9 +16,9 @@ function SongItem({ song }) {
     <div>
       <li>
         <Link className="link" to={`/songs/${id}`}>
-          <span>{title}</span>
-          <span>{artist}</span>
-          <span>{album}</span>
+          <span>{title.slice(0, 10)}</span>
+          <span>{artist.slice(0, 10)}</span>
+          <span>{album.slice(0, 10)}</span>
           <span>{year}</span>
         </Link>
         <button onClick={handleDelete} className="delete">
