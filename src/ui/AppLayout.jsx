@@ -1,8 +1,8 @@
-import SongList from "./SongList";
-import Pagination from "./Pagination";
-import AddButton from "./AddButton";
+import SongList from "../ui/SongList";
+import Pagination from "../ui/Pagination";
+import AddButton from "../ui/AddButton";
 import { Outlet } from "react-router-dom";
-import ThemeToggler from "./ThemeToggler";
+import ThemeToggler from "../ui/ThemeToggler";
 
 function AppLayout() {
   return (
