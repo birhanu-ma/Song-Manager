@@ -1,0 +1,102 @@
+/* form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100px;
+} */
+
+html {
+  background-color: #343a40;
+}
+/* body {
+  color: white;
+} */
+html.dark {
+  background-color: #343a40;
+  color: #f0f0f0;
+}
+
+html.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.formContainer {
+  position: absolute;
+  width: 50vw;
+  right: 10px;
+  top: 0;
+}
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+}
+.btn {
+  display: inline;
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+
+  cursor: pointer;
+  margin: 10px;
+}
+.btn-add {
+  margin-left: 0;
+  cursor: pointer;
+}
+ul {
+  padding-left: 0;
+  position: relative;
+  width: 40vw;
+  margin-top: 50px;
+  margin-left: 0;
+}
+li {
+  list-style: none;
+  padding: 15px 0;
+  border: 1px solid gray;
+  width: 100%;
+  background-color: #2b3035;
+  margin-left: 0;
+}
+.details {
+  position: absolute;
+  width: 50vw;
+  right: 10px;
+  top: 0;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.delete {
+  position: absolute;
+  border: none;
+  color: red;
+  background-color: transparent;
+  cursor: pointer;
+  right: 0;
+}
+.delete:hover {
+  background-color: gray;
+  border-radius: 50%;
+}
+span {
+  margin: 5px 20px;
+}
+.app {
+  margin-top: 50px;
+  height: 50vh;
+  position: relative;
+}
+.pagination {
+  cursor: pointer;
+}
+
+.toggler {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 10;
+}
