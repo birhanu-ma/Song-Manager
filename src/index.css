@@ -1,16 +1,7 @@
-/* form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  height: 100px;
-} */
-
-html {
-  background-color: #343a40;
-}
-/* body {
+.link {
+  text-decoration: none;
   color: white;
-} */
+}
 html.dark {
   background-color: #343a40;
   color: #f0f0f0;
@@ -55,10 +46,20 @@ ul {
 li {
   list-style: none;
   padding: 15px 0;
-  border: 1px solid gray;
+  border: 1px solid rgb(218, 210, 210);
   width: 100%;
   background-color: #2b3035;
   margin-left: 0;
+  margin-bottom: 4px;
+}
+
+html.light li {
+  background-color: white;
+  border: 1px solid rgb(10, 9, 9);
+  color: black !important;
+}
+html.light .link {
+  color: black;
 }
 .details {
   position: absolute;
@@ -66,10 +67,7 @@ li {
   right: 10px;
   top: 0;
 }
-.link {
-  text-decoration: none;
-  color: white;
-}
+
 .delete {
   position: absolute;
   border: none;
