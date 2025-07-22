@@ -107,3 +107,7 @@ Used console.log() and Redux DevTools, profiling to check that actions and state
 Checked API responses in the browser's Network tab.
 Verified image URLs and pagination worked by logging data from API.
 Fixed errors by debugging in the browser console.
+
+# AI assisted
+
+I received AI assistance to understand the structure and usage of Redux Saga in this project, including how to implement side effects like API calls.
