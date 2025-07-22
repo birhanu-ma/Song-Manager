@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-const AppLayout = lazy(() => import("./ui/AppLayout.jsx"));
+const AppLayout = lazy(() => import("./pages/AppLayout.jsx"));
 const SongDetails = lazy(() => import("./features/song/SongDetails.jsx"));
 const EditeSong = lazy(() => import("./features/song/EditSong.jsx"));
 const SongForm = lazy(() => import("./features/song/SongForm.jsx"));
