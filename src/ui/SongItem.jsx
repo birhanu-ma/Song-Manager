@@ -11,7 +11,6 @@ function SongItem({ song }) {
   function handleDelete(e) {
     e.preventDefault();
     dispatch(deleteSong(id));
-    <p>deleting...</p>;
   }
   return (
     <div>

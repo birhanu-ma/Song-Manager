@@ -5,6 +5,7 @@ const SongSlice = createSlice({
   initialState: {
     list: [],
     isLoading: false,
+    delete: false,
     error: null,
     added: false,
     page: 1,
@@ -49,11 +50,14 @@ const SongSlice = createSlice({
     },
 
     deleteSong: (state) => {
-      state.isLoading = true;
+      state.delete = true;
+      state.added = true;
     },
     deleteSongSuccess: (state, action) => {
       state.isLoading = false;
       state.list = state.list.filter((song) => song.id !== action.payload);
+      state.delete = false;
+      state.added = false;
     },
     inverseAdded: (state) => {
       state.added = !state.added;
