@@ -93,3 +93,17 @@ make sure you have
 
    example:
    PUT/23
+
+## Private API_KEY should be stored in a .env file and accessed using the `process.env` object.
+
+Example: const BASE_URL = process.env.API_KEY;
+Do NOT hardcode or push your API key to the repository — it's not safe.
+but I'm currently using a `public API, and for testing purposes`, I've pushed the API code directly to the repository.
+
+## How I verified the code:
+
+Ran the app locally and tested all CRUD operations (create, read, update, delete).
+Used console.log() and Redux DevTools, profiling to check that actions and state updates worked as expected.
+Checked API responses in the browser's Network tab.
+Verified image URLs and pagination worked by logging data from API.
+Fixed errors by debugging in the browser console.
