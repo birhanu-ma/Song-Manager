@@ -60,3 +60,36 @@ make sure you have
    to create a production-ready build
    npm run build
    the output will be in the dist/ folder
+
+   # API Documentation
+
+   This API logic fetches songs by aggregating data from three different endpoints: photos, albums, and users. Each "song" is constructed by combining a photo (as a base), the corresponding album, and the album's user (as the artist).
+
+   1. GET /songs
+      read/fetch song lists
+      query parameters
+      page : the page number to retrieve (default 1)
+      limit : number of songs per page
+
+   example:
+   GET /songs?page=2&limit=10
+
+   2. POST /albums
+      create a new album used to simulate creating a song
+      it returns the created album object
+
+   3. DELETE/photos/:id
+      Deletes a photo by ID used to simulate deleting a song
+      URL param:
+      . id - id of the song/photo to delete
+
+   example:
+   DELETE/photos/12
+
+   4. PUT/:id
+      updates an existing resource by ID
+      URL param:
+      . id - ID of the song to update
+
+   example:
+   PUT/23
