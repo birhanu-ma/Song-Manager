@@ -1,9 +1,9 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AppLayout from "./ui/AppLayout.jsx";
-import SongDetails from "./features/song/SongDetails.jsx";
-import EditeSong from "./features/song/EditSong.jsx";
-import SongForm from "./features/song/SongForm.jsx";
+const AppLayout = lazy(() => import("./ui/AppLayout.jsx"));
+const SongDetails = lazy(() => import("./features/song/SongDetails.jsx"));
+const EditeSong = lazy(() => import("./features/song/EditSong.jsx"));
+const SongForm = lazy(() => import("./features/song/SongForm.jsx"));
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,10 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 }
-
 export default App;
