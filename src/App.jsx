@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Lazy-loaded components
 const AppLayout = lazy(() => import("./pages/AppLayout.jsx"));
 const HomePage = lazy(() => import("./pages/HomePage.jsx"));
 const SongDetails = lazy(() => import("./features/song/SongDetails.jsx"));
