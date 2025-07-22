@@ -15,10 +15,10 @@ function SongDetails() {
   const dispatch = useDispatch();
   function handleNavigate() {
     dispatch(inverseAdded());
-    navigate(`/edit/${id}`);
+    navigate(`/songs/edit/${id}`);
   }
   if (!song) return;
-  if (loading) <p>loading...</p>;
+  if (loading) return <p>loading...</p>;
   return (
     <div className="details">
       <h1>Song details</h1>
