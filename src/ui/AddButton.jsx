@@ -11,7 +11,7 @@ function AddButton() {
 
   function handleAddSong() {
     dispatch(inverseAdded());
-    navigate("/newsong");
+    navigate("/songs/newsong");
   }
 
   return (
