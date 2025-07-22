@@ -5,7 +5,8 @@ import { useDispatch } from "react-redux";
 function SongItem({ song }) {
   const dispatch = useDispatch();
   if (!song) return null;
-  const { id, title, artist, album, year } = song;
+  const { id, title, artist, album, year, thumbnail } = song;
+  console.log(thumbnail);
 
   function handleDelete(e) {
     e.preventDefault();
@@ -16,6 +17,9 @@ function SongItem({ song }) {
     <div>
       <li>
         <Link className="link" to={`/songs/${id}`}>
+          <span>
+            <img src={thumbnail} alt={`${title.slice(0, 4)}`} />
+          </span>
           <span>{title.slice(0, 10)}</span>
           <span>{artist.slice(0, 10)}</span>
           <span>{album.slice(0, 10)}</span>
