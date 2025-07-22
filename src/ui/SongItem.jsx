@@ -10,8 +10,8 @@ function SongItem({ song }) {
 
   function handleDelete(e) {
     e.preventDefault();
-    console.log("delete get clicked");
     dispatch(deleteSong(id));
+    <p>deleting...</p>;
   }
   return (
     <div>
