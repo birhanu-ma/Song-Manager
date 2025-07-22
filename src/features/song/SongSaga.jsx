@@ -6,7 +6,7 @@ import { takeEvery, call, put, all } from "redux-saga/effects";
 // Do NOT hardcode or push your API key to the repository — it's not safe.
 
 // I'm currently using a public API, and for testing purposes, I've pushed the API code directly to the repository.
-const BASE_URL = "https:/jsonplaceholder.typicode.com";
+const BASE_URL = "https://jsonplaceholder.typicode.com";
 
 function* fetchSongs(action) {
   try {
