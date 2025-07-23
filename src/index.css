@@ -122,6 +122,12 @@ form input {
   align-items: center;
   width: 40vw;
 }
+.deleting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+}
 .delete {
   border: none;
   color: red;
@@ -188,7 +194,7 @@ form input {
     padding: 0;
   }
   .formContainer {
-    width: 80%;
+    width: 90%;
   }
   form {
     width: 100%;
@@ -197,66 +203,3 @@ form input {
     margin: 30px 0;
   }
 }
-
-/* .details {
-  position: absolute;
-  width: 50vw;
-  right: 10px;
-  top: 0;
-}
-
-
-
-span {
-  margin: 5px 20px;
-}
-.app {
-  display: flex;
-  flex-direction: row;
-  margin-top: 50px;
-  height: 50vh;
-  position: relative;
-}
-
-.toggler {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  z-index: 10;
-}
-
-.formContainer {
-  position: absolute;
-  width: 50vw;
-  right: 10px;
-  top: 0;
-}
-
-.btn-add {
-  margin-left: 0;
-  cursor: pointer;
-}
-
-ul {
-  padding-left: 0;
-  position: relative;
-  width: 40vw;
-  margin-top: 50px;
-  margin-left: 0;
-}
-li {
-  list-style: none;
-  padding: 15px 0;
-
-  width: 100%;
- 
-  margin-left: 0;
-  margin-bottom: 4px;
-} */
-
-/*
-
-  .details {
-    width: 80vw;
-  }
-} */
