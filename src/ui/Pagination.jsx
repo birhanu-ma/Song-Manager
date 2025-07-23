@@ -7,6 +7,7 @@ function Pagination() {
   const dispatch = useDispatch();
   const song = useSelector((state) => state.songs.list);
   const loading = useSelector((state) => state.songs.isLoading);
+  const isDelete = useSelector((state) => state.songs.delete);
 
   function handlePaginationUp() {
     dispatch(pageUp());
@@ -16,8 +17,8 @@ function Pagination() {
   }
   if (song.length <= 0) return;
   return (
-    <div className="pagination">
-      {!loading && (
+    <div className="next-previous">
+      {!loading && !isDelete && (
         <>
           <button className="btn" onClick={handlePaginationDown}>
             previous

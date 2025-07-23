@@ -7,6 +7,7 @@ function AddButton() {
   const navigate = useNavigate();
   const added = useSelector((state) => state.songs.added);
   const loading = useSelector((state) => state.songs.isLoading);
+  const isDelete = useSelector((state) => state.songs.delete);
   const dispatch = useDispatch();
 
   function handleAddSong() {

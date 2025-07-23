@@ -14,8 +14,20 @@ function SongList() {
   useEffect(() => {
     dispatch(readSong({ page, limit }));
   }, [dispatch, page, limit]);
-  if (loading) return <p>loading....</p>;
-  if (isDelete) return <p>deleting...</p>;
+
+  if (loading)
+    return (
+      <div className="loading">
+        <p>loading....</p>
+      </div>
+    );
+
+  if (isDelete)
+    return (
+      <div className="deleting">
+        <p>deleting...</p>
+      </div>
+    );
 
   if (!songs || songs.length === 0) return <p>No songs found. Add some!</p>;
   return (

@@ -13,22 +13,20 @@ function SongItem({ song }) {
     dispatch(deleteSong(id));
   }
   return (
-    <div>
-      <li>
-        <Link className="link" to={`/songs/${id}`}>
-          <span>
-            <img src={thumbnail} alt={`${title.slice(0, 4)}`} />
-          </span>
-          <span>{title.slice(0, 10)}</span>
-          <span>{artist.slice(0, 10)}</span>
-          <span>{album.slice(0, 10)}</span>
-          <span>{year}</span>
-        </Link>
-        <button onClick={handleDelete} className="delete">
-          &times;
-        </button>
-      </li>
-    </div>
+    <li>
+      <Link className="link" to={`/songs/${id}`}>
+        <span>
+          <img src={thumbnail} alt={`${title.slice(0, 4)}`} />
+        </span>
+        <span>{title.slice(0, 10)}</span>
+        <span>{artist.slice(0, 10)}</span>
+        <span>{album.slice(0, 10)}</span>
+        <span>{year}</span>
+      </Link>
+      <button onClick={handleDelete} className="delete">
+        &times;
+      </button>
+    </li>
   );
 }
 

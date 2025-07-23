@@ -5,7 +5,7 @@ function ThemeToggler() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <button onClick={toggleTheme} className="toggler btn">
+    <button onClick={toggleTheme} className="toggler">
       {theme === "light" ? "Dark" : "Light"} Mode
     </button>
   );

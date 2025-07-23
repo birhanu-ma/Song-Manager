@@ -1,6 +1,10 @@
-.link {
-  text-decoration: none;
-  color: white;
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 html.dark {
   background-color: #343a40;
@@ -17,30 +21,217 @@ html.light {
   align-items: center;
   flex-direction: column;
 }
+
+html.light li {
+  background-color: white;
+  border: 1px solid rgb(10, 9, 9);
+  color: black !important;
+}
+html.light .link {
+  color: black;
+}
+.app {
+  height: 100vh;
+}
+
+.song {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  box-sizing: border-box;
+}
+ul {
+  margin-right: 20px;
+  width: 50vw;
+}
+li {
+  border: 1px solid rgb(218, 210, 210);
+  background-color: #2b3035;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 40vw;
+}
+.toggler {
+  margin-left: 90%;
+  margin-top: 1%;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.btn {
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 5px;
+}
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  padding-right: 20px;
+}
+.pagination {
+  width: 50vw;
+  text-align: center;
+}
+.next-previous {
+  margin-bottom: 10px;
+}
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  margin: 25px 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+form input {
+  height: 40px;
+  margin-top: 10px;
+  width: 100%;
+}
+.add-btn {
+  margin-top: 5px;
+}
+.btn-update {
+  text-align: center;
+  margin-left: 40%;
+  margin-top: 10px;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+}
+.delete {
+  border: none;
+  color: red;
+  background-color: transparent;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin-top: 12px;
+  border-radius: 50%;
+}
+
+.delete:hover {
+  background-color: gray;
+  border-radius: 25%;
+}
+
+@media (max-width: 700px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  .song {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 50px;
+  }
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .details {
+    width: 80%;
+  }
+  li {
+    width: 80%;
+  }
+  .toggler {
+    margin-top: 1px;
+    margin-right: 10px;
+    padding: 0;
+  }
+  .formContainer {
+    width: 80%;
+  }
+  form {
+    width: 100%;
+  }
+  .pagination {
+    margin: 30px 0;
+  }
+}
+
+/* .details {
+  position: absolute;
+  width: 50vw;
+  right: 10px;
+  top: 0;
+}
+
+
+
+span {
+  margin: 5px 20px;
+}
+.app {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  height: 50vh;
+  position: relative;
+}
+
+.toggler {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 10;
+}
+
 .formContainer {
   position: absolute;
   width: 50vw;
   right: 10px;
   top: 0;
 }
-input {
-  padding: 10px;
-  margin: 10px;
-  width: 400px;
-}
-.btn {
-  display: inline;
-  width: 80px;
-  padding: 5px;
-  text-align: center;
 
-  cursor: pointer;
-  margin: 10px;
-}
 .btn-add {
   margin-left: 0;
   cursor: pointer;
 }
+
 ul {
   padding-left: 0;
   position: relative;
@@ -51,55 +242,16 @@ ul {
 li {
   list-style: none;
   padding: 15px 0;
-  border: 1px solid rgb(218, 210, 210);
+
   width: 100%;
-  background-color: #2b3035;
+ 
   margin-left: 0;
   margin-bottom: 4px;
-}
+} */
 
-html.light li {
-  background-color: white;
-  border: 1px solid rgb(10, 9, 9);
-  color: black !important;
-}
-html.light .link {
-  color: black;
-}
-.details {
-  position: absolute;
-  width: 50vw;
-  right: 10px;
-  top: 0;
-}
+/*
 
-.delete {
-  position: absolute;
-  border: none;
-  color: red;
-  background-color: transparent;
-  cursor: pointer;
-  right: 0;
-}
-.delete:hover {
-  background-color: gray;
-  border-radius: 50%;
-}
-span {
-  margin: 5px 20px;
-}
-.app {
-  margin-top: 50px;
-  height: 50vh;
-  position: relative;
-}
-.pagination {
-  cursor: pointer;
-}
-
-.toggler {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  z-index: 10;
-}
+  .details {
+    width: 80vw;
+  }
+} */

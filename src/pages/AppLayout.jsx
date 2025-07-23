@@ -10,10 +10,16 @@ function AppLayout() {
   return (
     <div className="app">
       <ThemeToggler />
-      <SongList />
-      <Outlet />
-      <Pagination />
-      <AddButton />
+      <div className="main">
+        <div className="song">
+          <SongList />
+          <Outlet />
+        </div>
+        <div className="pagination">
+          <Pagination />
+          <AddButton />
+        </div>
+      </div>
     </div>
   );
 }

@@ -10,6 +10,8 @@ function SongForm({ song }) {
   const [album, setAlbum] = useState("");
   const [year, setYear] = useState("");
   const added = useSelector((state) => state.songs.added);
+  const isDelete = useSelector((state) => state.songs.delete);
+  const loading = useSelector((state) => state.songs.isLoading);
 
   useEffect(() => {
     if (song) {
@@ -37,7 +39,7 @@ function SongForm({ song }) {
 
   return (
     <div className="formContainer">
-      {added && (
+      {added && !isDelete && !loading && (
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -67,7 +69,7 @@ function SongForm({ song }) {
             value={year}
             onChange={(e) => setYear(e.target.value)}
           />
-          <button className="btn" type="submit">
+          <button className="btn add-btn" type="submit">
             {song ? "Update Song" : "Add Song"}
           </button>
         </form>
