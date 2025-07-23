@@ -10,7 +10,7 @@ function HomePage() {
   return (
     <div className="homepage">
       <h1>🎵 Song Manager</h1>
-      <p>
+      <p className="intro">
         Welcome to the Song Manager app a simple yet powerful tool to manage
         your music collection.
       </p>

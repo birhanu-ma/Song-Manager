@@ -21,6 +21,9 @@ html.light {
   align-items: center;
   flex-direction: column;
 }
+.intro {
+  text-align: center;
+}
 
 html.light li {
   background-color: white;
@@ -113,7 +116,7 @@ form input {
 }
 .btn-update {
   text-align: center;
-  margin-left: 40%;
+  margin-left: 45%;
   margin-top: 10px;
 }
 .loading {
